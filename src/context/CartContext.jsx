@@ -1,9 +1,20 @@
-import { createContext, useContext, useReducer } from 'react'
+import { createContext, useContext, useEffect, useReducer } from 'react'
 
 export const CartContext = createContext(null)
 
+const STORAGE_KEY = 'saltline_cart_items'
+
+function loadItems() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY)
+    return stored ? JSON.parse(stored) : []
+  } catch {
+    return []
+  }
+}
+
 const initialState = {
-  items: [],
+  items: loadItems(),
   isOpen: false,
 }
 
@@ -76,6 +87,14 @@ function cartReducer(state, action) {
 
 export function CartProvider({ children }) {
   const [state, dispatch] = useReducer(cartReducer, initialState)
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.items))
+    } catch {
+      // storage quota exceeded or unavailable — fail silently
+    }
+  }, [state.items])
 
   const addItem = (payload) => dispatch({ type: 'ADD_ITEM', payload })
   const removeItem = (id, size) => dispatch({ type: 'REMOVE_ITEM', payload: { id, size } })
