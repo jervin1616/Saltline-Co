@@ -43,13 +43,16 @@ export default function ProductCard({ product, showQuickAdd = false }) {
     >
       {/* Image Area */}
       <div className="relative aspect-square bg-sand-dark overflow-hidden">
-        {/* Placeholder */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-          <span className="text-5xl mb-2">{product.emoji}</span>
-          <span className="font-dm italic text-xs text-driftwood-mid text-center leading-tight">
-            {product.name}
-          </span>
-        </div>
+        {/* Product Image */}
+        <img
+          src={product.image}
+          alt={product.name}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+          onError={(e) => {
+            e.target.style.display = 'none'
+          }}
+        />
 
         {/* Badge */}
         {product.badge && (

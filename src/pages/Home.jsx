@@ -47,11 +47,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Hero Image Placeholder */}
+            {/* Right: Hero Image */}
             <div className="flex justify-center md:justify-end">
-              <div className="aspect-square w-full max-w-md bg-sand-dark rounded-2xl flex flex-col items-center justify-center shadow-sm">
-                <span className="text-8xl mb-4">🌊</span>
-                <p className="font-dm italic text-driftwood-mid text-sm">New arrivals dropping soon</p>
+              <div className="aspect-square w-full max-w-md rounded-2xl overflow-hidden shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&h=900&fit=crop&q=80&auto=format"
+                  alt="Aerial view of ocean waves"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

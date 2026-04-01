@@ -59,9 +59,20 @@ export default function ProductDetail() {
         {/* Product Detail Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
           {/* Left: Image */}
-          <div className="aspect-square bg-sand-dark rounded-lg flex flex-col items-center justify-center shadow-sm">
-            <span className="text-8xl mb-4">{product.emoji}</span>
-            <p className="font-dm italic text-driftwood-mid text-sm">{product.name}</p>
+          <div className="aspect-square bg-sand-dark rounded-lg overflow-hidden shadow-sm">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.style.display = 'none'
+                e.target.nextSibling.style.display = 'flex'
+              }}
+            />
+            <div className="hidden w-full h-full flex-col items-center justify-center">
+              <span className="text-8xl mb-4">{product.emoji}</span>
+              <p className="font-dm italic text-driftwood-mid text-sm">{product.name}</p>
+            </div>
           </div>
 
           {/* Right: Info */}

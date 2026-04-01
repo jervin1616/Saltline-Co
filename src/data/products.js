@@ -1,3 +1,6 @@
+const UNS = (id, w = 800, h = 800) =>
+  `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&q=80&auto=format`
+
 export const products = [
   {
     id: 1,
@@ -5,6 +8,7 @@ export const products = [
     price: 38,
     originalPrice: null,
     category: 'Apparel',
+    image: UNS('1581655353564-df123a1eb820'),
     description:
       'The classic. A relaxed-fit tee with our original wave graphic, screen printed right here in Wilmington. Soft enough for the water, clean enough for the bar after. This is the shirt you reach for every time.',
     details: [
@@ -25,6 +29,7 @@ export const products = [
     price: 78,
     originalPrice: null,
     category: 'Apparel',
+    image: UNS('1556821840-3a63f15732ce'),
     description:
       'Named for the river that runs through it. This heavyweight pullover hoodie is built for early mornings on the dock and late nights around the fire. The kind of hoodie that becomes someone\'s favorite in about two wears.',
     details: [
@@ -45,6 +50,7 @@ export const products = [
     price: 68,
     originalPrice: null,
     category: 'Apparel',
+    image: UNS('1620799140408-edc6dcb6d633'),
     description:
       'Wrightsville Beach is where we go to reset. This midweight crewneck captures that energy — easygoing, a little salty, always comfortable. Layer it over a swimsuit or wear it to brunch. It works either way.',
     details: [
@@ -65,6 +71,7 @@ export const products = [
     price: 34,
     originalPrice: null,
     category: 'Accessories',
+    image: UNS('1588850561407-ed78c282e89b'),
     description:
       'A structured five-panel cap with our embroidered wave logo on the front. Low-profile, adjustable, and built to take a beating at the beach. The go-to hat for when you need something that just works.',
     details: [
@@ -85,6 +92,7 @@ export const products = [
     price: 28,
     originalPrice: null,
     category: 'Accessories',
+    image: UNS('1544816565-aa8c1166648f'),
     description:
       'Heavy-duty canvas tote built for the beach, the farmers market, or the grocery run. Big enough for a towel, a book, and everything else you bring to the coast. Screen printed with our coastal line graphic.',
     details: [
@@ -105,6 +113,7 @@ export const products = [
     price: 12,
     originalPrice: null,
     category: 'Accessories',
+    image: UNS('1614854262318-831574f15f1f'),
     description:
       'Six vinyl stickers featuring original Saltline Co. coastal graphics. Waterproof, UV-resistant, and built to handle whatever the coast throws at them. Stick them on your water bottle, your car, your laptop — anywhere you want a little coastal energy.',
     details: [
@@ -125,6 +134,7 @@ export const products = [
     price: 22,
     originalPrice: null,
     category: 'Drinkware',
+    image: UNS('1566633806327-68e152aaf26d'),
     description:
       'ILM is Wilmington\'s airport code, and it\'s how locals know they\'re home. This pint glass is for the post-surf beer, the Friday evening wind-down, the "good to be back" moments. Simple, clean, coastal.',
     details: [
@@ -145,6 +155,7 @@ export const products = [
     price: 42,
     originalPrice: null,
     category: 'Drinkware',
+    image: UNS('1514228742587-6b1558fcca3d'),
     description:
       'Double-wall insulated for the coffee you drink watching the sun come up over Wrightsville. Keeps hot drinks hot for 6 hours, cold drinks cold for 18. The sunrise doesn\'t wait — you shouldn\'t have to either.',
     details: [
@@ -165,6 +176,7 @@ export const products = [
     price: 38,
     originalPrice: 48,
     category: 'Drinkware',
+    image: UNS('1602143407151-7111542de6e8'),
     description:
       'Wide-mouth insulated bottle built for long beach days and longer hikes through the dunes. Takes the logo engraving well and the beach abuse even better. Currently on sale — grab it before it\'s gone.',
     details: [
@@ -185,6 +197,7 @@ export const products = [
     price: 55,
     originalPrice: null,
     category: 'Art & Prints',
+    image: UNS('1513519245088-0e12902e35a6'),
     description:
       'A minimal line art print of the Wilmington skyline, drawn from the river looking west at golden hour. Clean enough for a modern space, coastal enough to feel like home. Designed by our in-house team in the Soda Pop District.',
     details: [
@@ -205,6 +218,7 @@ export const products = [
     price: 65,
     originalPrice: null,
     category: 'Art & Prints',
+    image: UNS('1507525428034-b723cf961d3e'),
     description:
       'The ocean at dusk — that specific shade of pink and orange that only happens right here on this coast. This print captures it. A warmly colored art print that looks like the end of a perfect beach day, every time you look at it.',
     details: [
@@ -225,6 +239,7 @@ export const products = [
     price: 45,
     originalPrice: null,
     category: 'Art & Prints',
+    image: UNS('1569336415962-a4bd9f69c533'),
     description:
       'An illustrated topographic map of the Cape Fear River from source to sea. Hand-rendered in ink, digitized, and printed large. Perfect for anyone who grew up on this river or just fell in love with it. Looks incredible framed.',
     details: [

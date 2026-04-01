@@ -42,10 +42,16 @@ export default function About() {
       <section className="bg-sand py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            {/* Image Placeholder */}
-            <div className="aspect-square bg-sand-dark rounded-2xl flex flex-col items-center justify-center shadow-sm">
-              <span className="text-8xl mb-4">🏄</span>
-              <p className="font-dm italic text-driftwood-mid text-sm">Early days — Soda Pop District, 2018</p>
+            {/* Story Image */}
+            <div className="aspect-square rounded-2xl overflow-hidden shadow-sm relative">
+              <img
+                src="https://images.unsplash.com/photo-1528543025513-b7e58d1600b9?w=800&h=800&fit=crop&q=80&auto=format"
+                alt="Surfer on the Carolina coast"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-driftwood/60 backdrop-blur-sm px-5 py-3">
+                <p className="font-dm italic text-white/80 text-sm">Early days — Soda Pop District, 2018</p>
+              </div>
             </div>
 
             {/* Story Text */}
