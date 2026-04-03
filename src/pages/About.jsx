@@ -45,7 +45,7 @@ export default function About() {
             {/* Story Image */}
             <div className="aspect-square rounded-2xl overflow-hidden shadow-sm relative">
               <img
-                src="https://images.unsplash.com/photo-1528543025513-b7e58d1600b9?w=800&h=800&fit=crop&q=80&auto=format"
+                src="/Saltline-Co/images/surfer.svg"
                 alt="Surfer on the Carolina coast"
                 className="w-full h-full object-cover"
               />

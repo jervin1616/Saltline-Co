@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5276;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#2e86c1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#85c1e9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a6e8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d4f63;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dade2;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#1a6e8a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="foamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#d6eaf8;stop-opacity:0.7" />
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="800" fill="url(#skyGrad)" />
+
+  <!-- Sun -->
+  <circle cx="640" cy="120" r="55" fill="#f39c12" opacity="0.9" />
+  <circle cx="640" cy="120" r="70" fill="#f39c12" opacity="0.2" />
+
+  <!-- Distant horizon ocean -->
+  <rect x="0" y="420" width="800" height="380" fill="url(#oceanGrad)" />
+
+  <!-- Background wave shapes (distant) -->
+  <path d="M0 430 Q100 410 200 430 Q300 450 400 428 Q500 408 600 430 Q700 452 800 430 L800 460 L0 460 Z" fill="#2980b9" opacity="0.5" />
+  <path d="M0 445 Q120 425 240 445 Q360 465 480 443 Q600 423 720 445 L800 450 L800 475 L0 475 Z" fill="#1f618d" opacity="0.4" />
+
+  <!-- Main large wave -->
+  <path d="M-10 600 Q80 490 180 520 Q260 545 310 510 Q360 475 420 490 Q500 512 560 480 Q620 448 680 465 Q740 482 800 455 L800 800 L-10 800 Z" fill="url(#waveGrad)" />
+
+  <!-- Wave curl top highlight -->
+  <path d="M300 510 Q350 488 400 492 Q450 496 490 478 Q530 460 560 480 Q520 455 480 468 Q440 482 400 480 Q360 478 320 495 Z" fill="#85c1e9" opacity="0.6" />
+
+  <!-- Wave foam/whitewash -->
+  <path d="M-10 640 Q60 615 140 630 Q220 645 300 618 Q340 604 380 615 Q420 626 480 610 Q540 594 600 610 Q680 630 800 605 L800 660 Q700 640 620 658 Q540 676 460 652 Q380 628 300 648 Q220 668 140 650 Q70 634 -10 652 Z" fill="url(#foamGrad)" />
+
+  <!-- Foreground ocean surface -->
+  <path d="M-10 700 Q100 685 200 695 Q300 705 400 690 Q500 675 600 688 Q700 701 800 685 L800 800 L-10 800 Z" fill="#0d4f63" opacity="0.8" />
+
+  <!-- Surfboard -->
+  <g transform="translate(340, 455) rotate(-8)">
+    <!-- Board body -->
+    <ellipse cx="0" cy="0" rx="12" ry="72" fill="#f5cba7" />
+    <!-- Board rails -->
+    <ellipse cx="0" cy="0" rx="12" ry="72" fill="none" stroke="#d4a574" stroke-width="1.5" />
+    <!-- Board stripe -->
+    <rect x="-3" y="-45" width="6" height="90" fill="#e8936a" opacity="0.6" rx="3" />
+    <!-- Fin -->
+    <path d="M-2 58 Q-8 72 -4 78 Q0 74 2 58 Z" fill="#c0392b" />
+  </g>
+
+  <!-- Surfer silhouette -->
+  <g transform="translate(352, 440)">
+    <!-- Back leg -->
+    <path d="M-2 28 Q-10 45 -12 60" stroke="#1a252f" stroke-width="7" stroke-linecap="round" fill="none" />
+    <!-- Front leg -->
+    <path d="M4 28 Q8 42 6 58" stroke="#1a252f" stroke-width="7" stroke-linecap="round" fill="none" />
+
+    <!-- Torso -->
+    <path d="M0 0 Q-2 14 0 28" stroke="#1a252f" stroke-width="9" stroke-linecap="round" fill="none" />
+
+    <!-- Back arm (trailing) -->
+    <path d="M-2 8 Q-18 4 -24 12" stroke="#1a252f" stroke-width="6" stroke-linecap="round" fill="none" />
+
+    <!-- Front arm (leading/extended) -->
+    <path d="M2 6 Q14 -4 22 -8" stroke="#1a252f" stroke-width="6" stroke-linecap="round" fill="none" />
+
+    <!-- Head -->
+    <circle cx="0" cy="-8" r="9" fill="#1a252f" />
+
+    <!-- Wetsuit highlight -->
+    <path d="M-1 2 Q-1 14 0 24" stroke="#2e4057" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5" />
+  </g>
+
+  <!-- Spray/mist at wave base -->
+  <path d="M150 580 Q180 570 210 578 Q190 565 160 570 Z" fill="white" opacity="0.5" />
+  <path d="M550 520 Q580 510 610 518 Q590 505 560 510 Z" fill="white" opacity="0.4" />
+  <path d="M420 538 Q445 528 475 535 Q455 522 430 527 Z" fill="white" opacity="0.45" />
+
+  <!-- Foreground foam streaks -->
+  <path d="M0 730 Q150 720 300 728 Q450 736 600 722 Q700 714 800 724" stroke="white" stroke-width="3" fill="none" opacity="0.3" />
+  <path d="M0 758 Q100 748 250 756 Q400 764 550 750 Q660 740 800 752" stroke="white" stroke-width="2" fill="none" opacity="0.25" />
+
+  <!-- Seagulls (distant) -->
+  <path d="M120 200 Q126 194 132 200" stroke="white" stroke-width="2" fill="none" opacity="0.7" />
+  <path d="M148 185 Q155 179 162 185" stroke="white" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M90 220 Q95 215 100 220" stroke="white" stroke-width="1.5" fill="none" opacity="0.5" />
+</svg>
